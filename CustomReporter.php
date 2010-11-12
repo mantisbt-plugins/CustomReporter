@@ -6,7 +6,7 @@ class CustomReporterPlugin extends MantisPlugin {
 		$this->name = 'CustomReporter';    
 		$this->description = 'Ability to select Reporter';    
 		$this->page = 'config';           
-		$this->version = '1.0';     
+		$this->version = '1.01';     
 		$this->requires = array( 'MantisCore' => '1.2.0', );
 		$this->author = 'Carlos Proensa';        
 		$this->contact = '';       
@@ -33,14 +33,21 @@ class CustomReporterPlugin extends MantisPlugin {
 		$user_id= auth_get_current_user_id();
 		$access_level= user_get_access_level( $user_id, $p_project_id );
 		if ($access_level >plugin_config_get( 'reporter_select_threshold'  )) {
-			echo '<tr><td class="category">';
-			echo 'Reporter: ';
-			echo '</td><td>';
-				echo '<select '.helper_get_tab_index().' name="user_id">';
-				print_reporter_option_list( $user_id, $p_new_bug->project_id );
-				echo '</select>';
+			?>
+			<tr <?php echo helper_alternate_class() ?>>
+			<td class="category" width="30%">
+			<?PHP echo 'Reporter: ' ?>
+			</td>
+			<td width="70%">
+			<select <?php echo helper_get_tab_index() ?> name="user_id">
+			<?php
+			print_reporter_option_list( $user_id, $p_project_id );
+			?>
+			</select>
+			</td>
+			</tr>
+			<?PHP
 		}
-		echo '</td></tr>';
 	}
 
 
