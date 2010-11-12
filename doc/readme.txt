@@ -1,0 +1,18 @@
+CustomReporter plugin
+=====================
+
+A plugin for MantisBT that allows the selection of a Reporter from a list on the 
+Report Issue page.
+
+Reference: http://www.mantisbt.org/bugs/view.php?id=11615
+
+Revision history
+1.02  2010-11-12  Damien Regad
+      Fix incorrect access level check
+      Use strings for displayed text
+      Add title to configuration page
+      Align with MantisBT coding guidelines
+1.01  2010-11-12  Cas Nuy
+      Fix cosmetic issues
+1.00  2010-11-09  Carlos Proensa, Cas Nuy
+      Initial version
