@@ -1,0 +1,5 @@
+<?PHP
+	$s_plugin_format_title = "CustomReporterSelect";
+	$s_plugin_customceporter_config = "Configuration";
+	$s_reporter_select_threshold ="Treshold for selecting Reporter";
+	$s_change_configuration ="Update Config";
