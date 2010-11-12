@@ -32,7 +32,7 @@ class CustomReporterPlugin extends MantisPlugin {
 		#
 		$user_id= auth_get_current_user_id();
 		$access_level= user_get_access_level( $user_id, $p_project_id );
-		if ($access_level >plugin_config_get( 'reporter_select_threshold'  )) {
+		if( $access_level >= plugin_config_get( 'reporter_select_threshold' ) ) {
 			?>
 			<tr <?php echo helper_alternate_class() ?>>
 			<td class="category" width="30%">
