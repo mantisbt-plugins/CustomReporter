@@ -40,7 +40,7 @@ class CustomReporterPlugin extends MantisPlugin {
 				</td>
 				<td width="70%">
 					<select <?php echo helper_get_tab_index() ?> name="reporter_id">
-						<?php print_reporter_option_list( $t_user_id, $p_new_bug->project_id ) ?>
+						<?php print_reporter_option_list( $t_user_id, $p_project_id ) ?>
 					</select>
 				</td>
 			</tr>
