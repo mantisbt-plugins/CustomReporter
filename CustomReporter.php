@@ -6,7 +6,7 @@ class CustomReporterPlugin extends MantisPlugin {
 		$this->name = lang_get( 'plugin_customreporter_title' );
 		$this->description = lang_get( 'plugin_customreporter_description' );
 		$this->page = 'config';
-		$this->version = '1.02';
+		$this->version = '1.03';
 		$this->requires = array( 'MantisCore' => '1.2.0', );
 		$this->author = 'Carlos Proensa, Cas Nuy, Damien Regad';
 		$this->contact = '';
@@ -32,7 +32,7 @@ class CustomReporterPlugin extends MantisPlugin {
 		$t_user_id = auth_get_current_user_id();
 		$t_access_level = user_get_access_level( $t_user_id, $p_project_id );
 
-		if ( $t_access_level >= plugin_config_get( 'select_threshold'  ) ) {
+		if ( $t_access_level >= plugin_config_get( 'select_threshold' ) ) {
 ?>		    
 			<tr <?php echo helper_alternate_class() ?>>
 				<td class="category" width="30%">
