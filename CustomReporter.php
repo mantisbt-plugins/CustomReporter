@@ -6,7 +6,7 @@ class CustomReporterPlugin extends MantisPlugin {
 		$this->name = lang_get( 'plugin_customreporter_title' );
 		$this->description = lang_get( 'plugin_customreporter_description' );
 		$this->page = 'config';
-		$this->version = '1.03';
+		$this->version = '1.04';
 		$this->requires = array( 'MantisCore' => '1.2.0', );
 		$this->author = 'Carlos Proensa, Cas Nuy, Damien Regad';
 		$this->contact = '';
