@@ -1,5 +1,6 @@
 <?php
-	$s_plugin_customreporter_title       = 'Custom Reporter Select';
-	$s_plugin_customreporter_description = 'Allows selection of a Reporter on the Report Issue page';
-	$s_plugin_customreporter_config      = 'Configuration';
-	$s_plugin_customreporter_threshold   = 'Threshold to allow Reporter selection';
+$s_plugin_CustomReporter_title       = 'Custom Reporter Select';
+$s_plugin_CustomReporter_description = 'Allows selection of a Reporter on the Report Issue page';
+$s_plugin_CustomReporter_config      = 'Configuration';
+$s_plugin_CustomReporter_threshold   = 'Threshold to allow Reporter selection';
+$s_plugin_CustomReporter_change_configuration = 'Save';

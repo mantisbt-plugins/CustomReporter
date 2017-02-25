@@ -1,16 +1,17 @@
 <?php
-
-# authenticate
+# Custom Reporter
+#
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 
-# Read results
-form_security_validate( 'plugin_customreporter_config_update' );
-$f_reporter_select_threshold = gpc_get_int( 'plugin_customreporter_threshold', DEVELOPER );
+# Read inputs
+$fv = 'plugin_CustomReporter_config_update';
+form_security_validate( $fv );
+$input_name = plugin_config_get( 'html_select_threshold_name' );
+$f_reporter_select_threshold = gpc_get_int( $input_name, DEVELOPER );
 
 # update results
-plugin_config_set( 'select_threshold', $f_reporter_select_threshold );
-form_security_purge( 'plugin_customreporter_config_update' );
+plugin_config_set( $input_name, $f_reporter_select_threshold );
+form_security_purge( $fv  );
 
-# redirect
 print_successful_redirect( plugin_page( 'config', true ) );

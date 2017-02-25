@@ -7,6 +7,8 @@ Report Issue page.
 Reference: http://www.mantisbt.org/bugs/view.php?id=11615
 
 Revision history
+1.04  2017-02-25
+      Refactoring to be compatible with mantisbt-2.1.0       
 1.03  2011-06-20
       Fix warning due to undefined variable
 1.02  2010-11-12  Damien Regad
