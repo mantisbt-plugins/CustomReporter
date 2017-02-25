@@ -25,50 +25,61 @@
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 $t_title = plugin_lang_get( 'title' );
-html_page_top( $t_title );
+layout_page_header( $t_title );
+layout_page_begin( 'manage_overview_page.php' );
 print_manage_menu();
 ?>
 
 <br/>
-<div class="form-container width50">
+<div class="col-md-12 col-xs-12">
+<div class="space-10"></div>
+<div class="form-container">
 
-<form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
-	<?php echo form_security_field( 'plugin_customreporter_config_update' ) ?>
+	<form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
+		<?php echo form_security_field( 'plugin_customreporter_config_update' ) ?>
 
-	<table>
+		<fieldset>
+			<div class="widget-box widget-color-blue2">
+				<div class="widget-header widget-header-small">
+					<h4 class="widget-title lighter">
+						<i class="ace-icon fa fa-exchange"></i>
+						<?php echo plugin_lang_get( 'config' ); ?>
+					</h4>
+				</div>
 
-		<thead>
-			<tr>
-				<th class="form-title" colspan="2">
-					<?php echo $t_title . ': ' . plugin_lang_get( 'config' )?>
-				</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<tr>
-				<td class="category">
-					<?php echo plugin_lang_get( 'threshold' ) ?>
-				</td>
-				<td class="center">
-					<select name="plugin_customreporter_threshold">
-					<?php print_enum_string_option_list( 'access_levels', plugin_config_get( 'select_threshold'  ) ) ?>;
-					</select>
-				</td>
-			</tr>
-		</tbody>
-
-		<tfoot>
-			<tr>
-				<td class="center" colspan="3">
-					<input type="submit" class="button" value="<?php echo lang_get( 'change_configuration' ) ?>" />
-				</td>
-			</tr>
-		</tfoot>
-
-	</table>
-</form>
+				<div class="widget-body">
+					<div class="widget-main no-padding">
+						<div class="table-responsive">
+							<table class="table table-bordered table-condensed table-striped">
+								<tr>
+									<td class="category">
+										<?php echo plugin_lang_get( 'threshold' ) ?>
+									</td>
+									<td>
+										<select id="plugin_customreporter_threshold"
+												name="plugin_customreporter_threshold"
+												class="input-sm"><?php
+											print_enum_string_option_list(
+												'access_levels',
+												plugin_config_get( 'select_threshold' )
+											); ?>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="widget-toolbox padding-8 clearfix">
+						<input type="submit"
+							   class="btn btn-primary btn-white btn-round"
+							   value="<?php echo lang_get( 'change_configuration' ) ?>"/>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</div>
 </div>
 
 <?php
-html_page_bottom1( __FILE__ );
+layout_page_end();
