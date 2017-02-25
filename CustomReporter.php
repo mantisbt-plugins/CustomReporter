@@ -3,20 +3,20 @@
 class CustomReporterPlugin extends MantisPlugin {
 
 	function register() {
-		$this->name = lang_get( 'plugin_customreporter_title' );
-		$this->description = lang_get( 'plugin_customreporter_description' );
+		$this->name = plugin_lang_get( 'title' );
+		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
-		$this->version = '1.03';
-		$this->requires = array( 'MantisCore' => '1.2.0', );
-		$this->author = 'Carlos Proensa, Cas Nuy, Damien Regad';
+		$this->version = '1.04';
+		$this->requires = array( 'MantisCore' => '<2.1.99', );
+		$this->author = 'Carlos Proensa, Cas Nuy, Damien Regad,Francisco Mancardi';
 		$this->contact = '';
 		$this->url = '';
 	}
 
 	function config() {
-		return array(
-			'select_threshold' => DEVELOPER,
-			);
+		$cfg = array('html_select_threshold_name' => 'select_threshold');
+		$cfg[$cfg['html_select_threshold_name']] = DEVELOPER;
+		return $cfg;
 	}
 
 
