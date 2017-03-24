@@ -23,8 +23,8 @@
  */
 
 /**
-  * German translation by Roman Allenstein
-  */
+ * German translation by Roman Allenstein
+ */
 $s_plugin_customreporter_title       = 'Abweichenden Reporter einstellen';
 $s_plugin_customreporter_description = 'Ermöglicht die Auswahl eines Reporters auf der Seite "Eintrag erfassen".';
 $s_plugin_customreporter_config      = 'Konfiguration';

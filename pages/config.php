@@ -23,10 +23,11 @@
  */
 
 auth_reauthenticate();
-	access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
-	html_page_top( lang_get( 'plugin_customreporter_title' ) );
-	print_manage_menu();
+access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
+html_page_top( lang_get( 'plugin_customreporter_title' ) );
+print_manage_menu();
 ?>
+
 <br/>
 <form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
 	<?php echo form_security_field( 'plugin_customreporter_config_update' ) ?>
