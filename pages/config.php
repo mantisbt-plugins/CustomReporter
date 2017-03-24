@@ -30,36 +30,45 @@ print_manage_menu();
 ?>
 
 <br/>
+<div class="form-container width50">
+
 <form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
 	<?php echo form_security_field( 'plugin_customreporter_config_update' ) ?>
 
-	<table align="center" class="width50" cellspacing="1">
+	<table>
 
-		<tr>
-			<td class="form-title" colspan="2">
-				<?php echo $t_title . ': ' . plugin_lang_get( 'config' )?>
-			</td>
-		</tr>
+		<thead>
+			<tr>
+				<th class="form-title" colspan="2">
+					<?php echo $t_title . ': ' . plugin_lang_get( 'config' )?>
+				</th>
+			</tr>
+		</thead>
 
-		<tr <?php echo helper_alternate_class() ?>>
-			<td class="category">
-				<?php echo plugin_lang_get( 'threshold' ) ?>
-			</td>
-			<td class="center">
-				<select name="plugin_customreporter_threshold">
-				<?php print_enum_string_option_list( 'access_levels', plugin_config_get( 'select_threshold'  ) ) ?>;
-				</select>
-			</td>
-		</tr>
+		<tbody>
+			<tr>
+				<td class="category">
+					<?php echo plugin_lang_get( 'threshold' ) ?>
+				</td>
+				<td class="center">
+					<select name="plugin_customreporter_threshold">
+					<?php print_enum_string_option_list( 'access_levels', plugin_config_get( 'select_threshold'  ) ) ?>;
+					</select>
+				</td>
+			</tr>
+		</tbody>
 
-		<tr>
-			<td class="center" colspan="3">
-				<input type="submit" class="button" value="<?php echo lang_get( 'change_configuration' ) ?>" />
-			</td>
-		</tr>
+		<tfoot>
+			<tr>
+				<td class="center" colspan="3">
+					<input type="submit" class="button" value="<?php echo lang_get( 'change_configuration' ) ?>" />
+				</td>
+			</tr>
+		</tfoot>
 
 	</table>
-<form>
+</form>
+</div>
 
 <?php
 html_page_bottom1( __FILE__ );
