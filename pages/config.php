@@ -24,7 +24,8 @@
 
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
-html_page_top( lang_get( 'plugin_customreporter_title' ) );
+$t_title = plugin_lang_get( 'title' );
+html_page_top( $t_title );
 print_manage_menu();
 ?>
 
@@ -36,13 +37,13 @@ print_manage_menu();
 
 		<tr>
 			<td class="form-title" colspan="2">
-				<?php echo lang_get( 'plugin_customreporter_title' ) . ': ' . lang_get( 'plugin_customreporter_config' )?>
+				<?php echo $t_title . ': ' . plugin_lang_get( 'config' )?>
 			</td>
 		</tr>
 
 		<tr <?php echo helper_alternate_class() ?>>
 			<td class="category">
-				<?php echo lang_get( 'plugin_customreporter_threshold' ) ?>
+				<?php echo plugin_lang_get( 'threshold' ) ?>
 			</td>
 			<td class="center">
 				<select name="plugin_customreporter_threshold">

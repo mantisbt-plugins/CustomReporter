@@ -25,7 +25,7 @@
 /**
  * German translation by Roman Allenstein
  */
-$s_plugin_customreporter_title       = 'Abweichenden Reporter einstellen';
-$s_plugin_customreporter_description = 'Ermöglicht die Auswahl eines Reporters auf der Seite "Eintrag erfassen".';
-$s_plugin_customreporter_config      = 'Konfiguration';
-$s_plugin_customreporter_threshold   = 'Berechtigungsstufe um einen abweichenden Reporter einzustellen';
+$s_plugin_CustomReporter_title       = 'Abweichenden Reporter einstellen';
+$s_plugin_CustomReporter_description = 'Ermöglicht die Auswahl eines Reporters auf der Seite "Eintrag erfassen".';
+$s_plugin_CustomReporter_config      = 'Konfiguration';
+$s_plugin_CustomReporter_threshold   = 'Berechtigungsstufe um einen abweichenden Reporter einzustellen';

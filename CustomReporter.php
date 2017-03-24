@@ -25,8 +25,8 @@
 class CustomReporterPlugin extends MantisPlugin {
 
 	function register() {
-		$this->name = lang_get( 'plugin_customreporter_title' );
-		$this->description = lang_get( 'plugin_customreporter_description' );
+		$this->name = plugin_lang_get( 'title' );
+		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
 		$this->version = '1.04';
 		$this->requires = array( 'MantisCore' => '1.2.0', );
