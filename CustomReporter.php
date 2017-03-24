@@ -31,8 +31,8 @@ class CustomReporterPlugin extends MantisPlugin {
 		$this->version = '1.04';
 		$this->requires = array( 'MantisCore' => '1.3.0', );
 		$this->author = 'Carlos Proensa, Cas Nuy, Damien Regad';
-		$this->contact = '';
-		$this->url = '';
+		$this->contact = 'dregad@mantisbt.org';
+		$this->url = 'https://github.com/mantisbt-plugins/CustomReporter/';
 	}
 
 	function config() {
