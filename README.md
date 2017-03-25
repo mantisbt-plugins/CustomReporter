@@ -24,10 +24,11 @@ See the [Change log](CHANGELOG.md).
 
 ### Requirements
 
-The plugin requires MantisBT version 1.3.0 or later.
+The plugin requires MantisBT version 2.0.0 or later.
 
-For legacy 1.2.x installations, please download 
-[version 1.04](https://github.com/mantisbt-plugins/CustomReporter/releases/tag/v1.04).
+For legacy installations, please download
+- 1.3.x: [version 1.5.0](https://github.com/mantisbt-plugins/CustomReporter/releases/tag/v1.5.0).
+- 1.2.x: [version 1.04](https://github.com/mantisbt-plugins/CustomReporter/releases/tag/v1.04).
 
 
 ### Setup instructions

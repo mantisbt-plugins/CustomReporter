@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 specification.
 
 
+## [2.0.0] - 2017-03-25
+
+### Added
+- Support for MantisBT 2.x, thanks to Francisco Mancardi
+
+### Removed
+- Support for MantisBT 1.3.x
+
+
 ## [1.5.0] - 2017-03-25
 
 ### Added
@@ -66,7 +75,8 @@ Maintenance release by Cas Nuy
   MantisBT [issue 11615](https://mantisbt.org/bugs/view.php?id=11615)
 
 
-[Unreleased]: https://github.com/mantisbt-plugins/CustomReporter/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/mantisbt-plugins/CustomReporter/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/mantisbt-plugins/CustomReporter/compare/v1.5.0...v2.0.0
 [1.5.0]: https://github.com/mantisbt-plugins/CustomReporter/compare/v1.04...v1.5.0
 [1.04]: https://github.com/mantisbt-plugins/CustomReporter/compare/v1.03...v1.04
 [1.03]: https://github.com/mantisbt-plugins/CustomReporter/compare/v1.02...v1.03
