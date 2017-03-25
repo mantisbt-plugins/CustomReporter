@@ -29,7 +29,7 @@ class CustomReporterPlugin extends MantisPlugin {
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
 		$this->version = '1.5.0';
-		$this->requires = array( 'MantisCore' => '1.3.0', );
+		$this->requires = array( 'MantisCore' => '2.0.0', );
 		$this->author = 'Carlos Proensa, Cas Nuy, Damien Regad';
 		$this->contact = 'dregad@mantisbt.org';
 		$this->url = 'https://github.com/mantisbt-plugins/CustomReporter/';
@@ -56,15 +56,20 @@ class CustomReporterPlugin extends MantisPlugin {
 
 		if ( $t_access_level >= plugin_config_get( 'select_threshold' ) ) {
 ?>
-			<div class="field-container">
-				<label><span><?php echo lang_get( 'reporter' ) ?></span></label>
-				<span class="input">
-					<select <?php echo helper_get_tab_index() ?> name="reporter_id">
+			<tr>
+				<th class="category">
+					<label for="reporter_id">
+						<?php echo lang_get( 'reporter' ) ?>
+					</label>
+				</th>
+				<td>
+					<select id="reporter_id" name="reporter_id"
+							<?php echo helper_get_tab_index() ?>
+							class="autofocus input-sm">
 						<?php print_reporter_option_list( $t_user_id, $p_project_id ) ?>
 					</select>
-				</span>
-				<span class="label-style"></span>
-			</div>
+				</td>
+			</tr>
 <?php
 		}
 	}
