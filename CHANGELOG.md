@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/)
 specification.
 
+## [2.0.1] - 2024-01-07
+- replaced print_succesful_redirect (deprecated) with print_header_redirect
 
 ## [2.0.0] - 2017-03-25
 

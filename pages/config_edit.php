@@ -35,4 +35,4 @@ plugin_config_set( 'select_threshold', $f_reporter_select_threshold );
 form_security_purge( 'plugin_customreporter_config_update' );
 
 # redirect
-print_successful_redirect( plugin_page( 'config', true ) );
+print_header_redirect( plugin_page( 'config', true ) );
